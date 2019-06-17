@@ -4,7 +4,7 @@
 ##	I.        Mots clés
 - Optimum global/local
 - (Méta) Heuristique
-- Accélération sur linéaire*
+- Accélération sur linéaire* ; 
 - Méthode arborescente
 - Voyageur du commerce*
 - Hill Climbing
@@ -59,12 +59,44 @@ Problématique : Comment résoudre le TSP avec des méthodes méta-heuristique r
 Etudes :
 
 ### Algorithme méta-heuristique
+- Les méthodes approchés ont pour but de trouver une solution admissible en un temps raisonnable, sans garantie l'optimalité de cette solution. On en trouve deux classes : Heuristiques & Méta-Heurisques
+
+- Heuristique : Règles empiriques simples basées sur l'expérience (trouver)
+- Meta (au delà , dans un niveau supérieur) : Méthode algorithmique capable de guider et d'orienter le processus de recherche  dans un espace de solution (souvent très grand) à des régions riches en solutions optimales dans le but de trouver des solutions très proche de l'optimum en un temps raisonable.
+- Il respecte les propriétés suivantes :
+	- Stratégies qui permettentde guider la recherche d'une solution optimale
+	- Explorer l'espace derecherche efficacement afin de déterminer des solutions (presques optimales)
+	- Méthodes de la simple procédure derecherche locale à des processus d'apprentissage complexe
+	- Non déterministes et ne donnent aucune garantie d'optimalité. (sort différents résultats à chaque fois)
+- Peut contenir des mécanismes quipermettent d'éviter d'être bloqué dansdes régions de l'espace de recherche
+- Concepts peuvent-être de manière abstraite sans faire appel à un problème spécifique
+- Peut faire appel à des heuristiques qui tiennent  compte de la spécificité du problème traité, mais ces heuristique sont contrôlées par une stratégie de niveau supérieur
+- Peut faire usage de l'expérience accumulée pour mieux guider la suite du processus de recherche
+
+On peut les classer selon leur principe de fonctionnement :
+- Méthodes par construction (gloutonn)
+	- On démarre une solution initiale vide
+	- A chaque itération, une variable est choisie (aléatoirement ou via heuristique)
+	- Le critère d'arrêt est l'affectation d'une valeur à toutes les variables du problème
+	- Pro/Cons : Simples mais performances médiogres
+	- Ex : (Méthode gloutone)
+- Méthodes de voisinage (recuit ismulé, recherche tabou)
+	- **[DIAPO 30/48 -**  //TO BE CONTINUED VA DORMIR EMILIEN
+- Méthodes évolutives (algo génétiques)
+- Méthodes biomimétiques (algo de colonies de fourmis & d'essaim de particules)
+
+
+
 
 ### Définition
 
 ### Liste des algos
 
-o Glouton
+o Glouton :
+- Permet de construire une solution pas à pas
+- Sans jamais revenir sur ses décisions
+- En prenant à chaque étape la solution meilleure localement (heuristique)
+- En sépérant obtenir une solution optimale
 
 o Hill Climbing
 
