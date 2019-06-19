@@ -15,20 +15,20 @@
 - Génération de colonnes*
 - Modélisation de voisinage : /
 - Convergence de la solution : Se diriger vers la solution
-- Algorithme génétique : 
-- Recuit simulé
-- Algorithme simulé
+- Algorithme génétique : Famille des évolutionnistes. Heuristiques, utilise la notion de sélection naturelle pour l'appliquer à sa popuplation.
+- Recuit simulé : /
+- Algorithme simulé : /
 - Problème de décision*
-- GRASP
-- Méthode de recherche local
+- GRASP : /
+- Méthode de recherche local : /
 - NP-complet*
-- Rugosité du voisinage
-- Solution de bonne qualité
-- Phase d’intensification/diversification
+- Rugosité du voisinage : ? 
+- Solution de bonne qualité : /
+- Phase d’intensification/diversification : /
 - Méthode exacte*
-- Colonie de Fourmies
-- Méthode de construction
-- Glouton
+- Colonie de Fourmies : Basé sur les colonies de fourmies, qui utilisent leur environnement. Elles utilisent des féromones pour marquer leur chemin et le plus court sera celui qui sera renforcé par le plus de féromone (le plus de passage). Les plus long seront donc automatiquement détruits. On peut résoudre le pb du voyageur de commerce. Métaheuristiques. Il suffit de mettre un certain coefficiant (poid) sur chaque arrête qui évoluera.
+- Méthode de construction : /
+- Glouton : /
 
 ##   II.        Contexte :
 Quoi : Trouver une solution rapidement et pseudo-optimal
@@ -86,27 +86,26 @@ Etudes :
 ### Liste des algos
 
 **o Glouton :**
-On démarre une solution initiale vide
-	- A chaque itération, une variable est choisie (aléatoirement ou via heuristique)
-	- Le critère d'arrêt est l'affectation d'une valeur à toutes les variables du problème
+- Type d'algorithme
 - Permet de construire une solution pas à pas, sans jamais revenir sur ses décisions, en prenant à chaque étape la solution meilleure localement (heuristique). Il prend donc souvent la plus forte pente.
 - Pro/Cons : Simples mais performances médiogres
 - Peut-être mis en échec ex : 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Greedy_Glouton.svg/1024px-Greedy_Glouton.svg.png)
 
 **o Hill Climbing :** 
+- Glouton
 Prend trois entrées en objet :
 - Une configuration initiale
 - Une fonction
 - Une fonction objectif
-⇒ Evaluer les solutions voisines et à choisir la meilleure ce celle ci, en ne recommançant jusqu'à arriver à une meilleure position  que ses précédentes. C'est alors un optimum local. Par contre, on peut rater d'autres optimums qui auraient été après.
+⇒ Evaluer les solutions voisines et à choisir la meilleure ce celle ci, en ne recommançant jusqu'à arriver à une meilleure position  que ses précédentes. C'est alors un *optimum local.* Par contre, on peut rater d'autres optimums qui auraient été après.
 
 
 **o Evolutionnaire génétiques** :
-- S'inspire de la théorie de l'évolue pour résoudre des pb (transission des caractéristiques au descendants)
+- S'inspire de la théorie de l'évolution pour résoudre des pb (transmission des caractéristiques au descendants)
 - Algorithmes dits stochastiques (random)
 - Utilisés pour résoudre des pb d'optimisation
-- Plus la finesse d'une solution est elevée, plus i a de chance de transmettre son "génotype" à la population.
+- Plus la finesse d'une solution (précision via) est elevée, plus il a de chance de transmettre son "génotype" à la population.
 - A chaque étape de l'algorithme, est associé un opérateur qui décrit la façon de manipuler les individus :
 	- "Opérateur de sélection pour la sélection et le remplacement"
 	- Opérateur de variation pour la mutation et le croisement
@@ -146,11 +145,11 @@ Pro/Cons : Demande généralement beaucoup de place mémoire et udu temps.
 
 **o Recherche voisinage Variable**
 - Proposé par Mladenovié et Hansen dans les années 90
-- Décompsé en deux phases :
+- Décomposé en deux phases :
 	- Déterministe (recherche locale qui converge vers un optimum)
 	- Stochastique : Pour s'en échapper. On génère une nouvelle solution selon un voisin donnée
 
-- On réintère plusieurs fois, à chaque fois en retartant sur un voisin, puis on éffectuant une nouvelle recherche locale...
+- On réintère plusieurs fois, à chaque fois en retantant sur un voisin, puis on éffectuant une nouvelle recherche locale...
 - Peut s'arêter au bout de X itérations ou un temps de calcul alloué.
 
 **o Voisinage :**  
@@ -182,8 +181,11 @@ o Appliquer au voyageur de commerce
 ### Trouver moyenne d’évaluation qualité
 
 Pour tester une métaheuristiques :
-- Utiliser des fonction smathématiques spécialement conçues
+- Utiliser des fonctions mathématiques spécialement conçues
 - On doit répéter un grand nombre de fois (car stochastiques) puis exploités via des méthodesstatistiques
 - Peu répendu dans la litératures spécialisée
 
 ### Corbeille d’exercice by MAZᶲ
+
+
+
