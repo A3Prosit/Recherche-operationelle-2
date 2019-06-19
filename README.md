@@ -158,11 +158,12 @@ Pro/Cons : Demande généralement beaucoup de place mémoire et udu temps.
 ### Diversification & Intensification :
 Preponderant dans la conception des métaheuristiques. On doit atteindre un équilibre délicat entre ces deux dynamiques de recheches : exploration puisse rapidement identifier des régions de l'espace de recherche qui contiennent des points de bonne qualité, sans perdre trop de temps à exploiter des régions moins prometteuses.
 
-**o Diversification**  (ou exploration)
-- Désigne les processus visant à **récolter de l'information** sur le problème optimisé. 
-- Mécanismes pour une exploration assez l'arge de l'espace de recherche
-**o Intensification** (ou exploitation)
-- Exploitation de l'information accumulée durant la recherche et concentration sur une zone précise
+- **o Diversification**  (ou exploration)
+	- Désigne les processus visant à **récolter de l'information** sur le problème optimisé. 
+	- Mécanismes pour une exploration assez l'arge de l'espace de recherche
+
+- **o Intensification** (ou exploitation)
+	- Exploitation de l'information accumulée durant la recherche et concentration sur une zone précise
 
 ### Exemple d’utilisation
 
