@@ -130,9 +130,8 @@ Pro/Cons : Demande généralement beaucoup de place mémoire et udu temps.
 ![](https://image.slidesharecdn.com/chapitre4heuristiquesetmta-heuristiques-160202125547/95/chapitre-4-heuristiques-et-mta-heuristiques-36-638.jpg?cb=1454417798)- Pro / Cons : Souple vis à vis des étovlutions du problème, facile à implémenter, évite les pièges des optimaux locaux, excellent résultats pour un nombre de problèmes complexes **MAIS** : Nombreux tests nécessaires pour trouver les bons paramètres, définir les voisinages permettant un calcul efficace du delta de l'énergie
 
 **o GRASP :** Greedy randomized adaptive search procedure) :
-- Produit une solution réalisable, exécuté k fois, et la meilleure solution est gardée. Décomposé en deux phases :
-- Phase de construction : Combine les méthodes gloutonnes et aléatoires par étape. A chaque étape, on sélectionne les meilleures résultats et on les ajoutes de manière random dans une liste appellée RCL (Restricted Candidate List). Cette liste est triée par un algorithme glouton.
-- Phase de recherche locale : On fais une recherche locale sur la liste pour savoir si il est encore possible d'améliorer cette solution.
+- Phase de construction : Combine les méthodes **gloutonnes** et **aléatoires** par étape. A chaque étape, on sélectionne les résultats et on les ajoutes dans une liste appellée RCL (Restricted Candidate List). Cette liste est triée par un algorithme glouton. On tire ensuite aléatoirement les meilleurs résultats pour les ajouter à la solution.
+- Phase de recherche locale : On fais une recherche locale sur nos candidats savoir si il est encore possible d'améliorer cette solution.
 
 **o Recherche local Guidé*** (GSL) :
 - Aider la recherche locale pour échapper à des optimum locaux (des min en gros)
